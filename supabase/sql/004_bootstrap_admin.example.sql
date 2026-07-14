@@ -3,4 +3,4 @@
 -- once in the Supabase SQL Editor. Do not commit real student data here.
 
 insert into members (student_id, name, team, part, role)
-values ('20230001', '홍길동', 'team_1', 'planning', 'admin');
+values ('22011909', '김성일', 'team_1', 'planning', 'admin');

@@ -44,3 +44,7 @@ Vercel에 프로젝트를 연결한 뒤 `NEXT_PUBLIC_SUPABASE_URL`,
 `SUPABASE_SERVICE_ROLE_KEY`, `SESSION_SECRET`을 Production/Preview 환경변수로
 등록하면 됩니다. `SUPABASE_SERVICE_ROLE_KEY`는 절대 `NEXT_PUBLIC_` 접두어를
 붙이지 않습니다 (클라이언트 번들에 노출되는 것 방지).
+
+랜딩 페이지 챗봇을 쓰려면 `GEMINI_API_KEY`([Google AI Studio](https://aistudio.google.com/apikey)에서 무료 발급)도
+Production/Preview 환경변수로 등록해야 합니다. `.env.local`은 git에 커밋되지 않으므로
+로컬에서만 동작하고, Vercel에는 별도로 등록해야 배포본에서도 챗봇이 응답합니다.

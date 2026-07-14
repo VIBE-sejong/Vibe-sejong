@@ -11,6 +11,7 @@ import {
   Palette,
   ClipboardList,
   Code2,
+  ExternalLink,
 } from "lucide-react";
 import { getSession } from "@/lib/auth/session.server";
 import { Button } from "@/components/ui/button";
@@ -174,9 +175,13 @@ export default async function Home() {
             <CardContent className="text-sm">
               전공도 실력도 상관없습니다.{" "}
               <strong className="text-gold shimmer">아이디어와 끈기</strong>만
-              있으면 됩니다. 중간에 도망가지 않을 사람이면 충분합니다.
+              있으면 됩니다. 학기 끝까지 완주할 의지만 있으면 충분합니다.
             </CardContent>
           </Card>
+          <p className="text-center text-xs text-muted-foreground">
+            VISE는 세종대학교 학생들이 자율적으로 운영하는 비영리 코딩 소모임이며,
+            특정 종교·정치 단체와 무관합니다.
+          </p>
         </section>
 
         <section className="space-y-4">
@@ -186,7 +191,7 @@ export default async function Home() {
           <p className="text-sm text-muted-foreground">
             한 학기 동안 <strong className="text-gold shimmer">4인 1팀</strong>
             으로 실제 서비스 하나를 기획부터 배포까지 완성합니다. 앱과 웹 중
-            팀이 원하는 방향을 골라 만들 수 있습니다. 총괄 멘토가 GitHub ·
+            팀이 원하는 방향을 골라 만들 수 있습니다. 운영진이 GitHub ·
             개발환경 세팅 · 개발 기초 · 배포까지 처음부터 끝까지 함께합니다.
           </p>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
@@ -232,6 +237,30 @@ export default async function Home() {
             구성됩니다. 바이브코딩은 전원에게 가르치고, 경험이 없어도 역할별
             기초부터 배웁니다.
           </p>
+        </section>
+
+        <section className="space-y-4">
+          <h2 className="text-xl font-semibold">만든 사람</h2>
+          <Card>
+            <CardContent className="flex flex-col gap-2">
+              <p className="text-sm">
+                <strong>김성일</strong> · 세종대학교 지능기전공학부
+                스마트기기전공 22학번 (컴퓨터공학 복수전공)
+              </p>
+              <p className="text-sm text-muted-foreground">
+                이 웹사이트를 포함해 VISE를 혼자 기획·개발하고 있습니다.
+              </p>
+              <a
+                href="https://github.com/KIMSE0NG1L"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-fit items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground"
+              >
+                <ExternalLink className="size-4" />
+                github.com/KIMSE0NG1L
+              </a>
+            </CardContent>
+          </Card>
         </section>
 
         <section id="지원" className="space-y-4">
