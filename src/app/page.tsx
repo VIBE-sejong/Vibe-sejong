@@ -16,6 +16,7 @@ import { getSession } from "@/lib/auth/session.server";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { ChatWidget } from "@/components/chat-widget";
 
 const APPLICATION_FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSdfkhLvfL3QspV-Os_3zDRBAcTPFlQ7qy8ivR4ts3ocW9ZjIA/viewform?usp=header";
@@ -294,6 +295,8 @@ export default async function Home() {
           />
         </div>
       </footer>
+
+      <ChatWidget />
     </div>
   );
 }
