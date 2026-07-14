@@ -67,7 +67,7 @@ export default async function AdminMembersPage() {
                   {member.role === "admin" ? (
                     <Badge>관리자</Badge>
                   ) : (
-                    <Badge variant="secondary">동아리원</Badge>
+                    <Badge variant="secondary">소모임원</Badge>
                   )}
                 </TableCell>
                 <TableCell className="text-right">

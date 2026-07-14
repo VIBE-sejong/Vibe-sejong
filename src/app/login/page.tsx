@@ -1,7 +1,6 @@
 "use client";
 
 import { useActionState } from "react";
-import { Sparkles } from "lucide-react";
 import { loginAction, type LoginState } from "./actions";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -25,12 +24,16 @@ export default function LoginPage() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-6 bg-muted/30 px-4">
       <div className="flex flex-col items-center gap-1 text-center">
-        <div className="mb-2 flex size-11 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
-          <Sparkles className="size-5" />
+        <div className="mb-2 flex size-16 items-center justify-center rounded-full border border-border bg-white p-2 shadow-sm">
+          <img
+            src="/sejong-emblem.png"
+            alt="세종대학교 엠블럼"
+            className="size-full object-contain"
+          />
         </div>
-        <h1 className="font-heading text-lg font-semibold">VISE</h1>
+        <h1 className="font-brand text-lg font-semibold">VISE</h1>
         <p className="text-sm text-muted-foreground">
-          세종대 바이브코딩 동아리
+          세종대 바이브코딩 소모임
         </p>
       </div>
 

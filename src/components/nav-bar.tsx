@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LogOut, Sparkles } from "lucide-react";
+import { LogOut } from "lucide-react";
 import { logoutAction } from "@/lib/auth/actions";
 import type { SessionClaims } from "@/lib/auth/session";
 import { Button } from "@/components/ui/button";
@@ -12,15 +12,19 @@ export function NavBar({ session }: { session: SessionClaims }) {
       <div className="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-3 px-4 py-5">
         <div className="flex items-center gap-6">
           <Link href="/dashboard" className="flex items-center gap-2.5">
-            <span className="flex size-9 items-center justify-center rounded-xl bg-white/15">
-              <Sparkles className="size-5" />
+            <span className="flex size-12 items-center justify-center rounded-full bg-white p-1">
+              <img
+                src="/sejong-emblem.png"
+                alt="세종대학교 엠블럼"
+                className="size-full object-contain"
+              />
             </span>
             <span className="flex flex-col leading-none">
-              <span className="font-heading text-xl font-bold tracking-tight">
+              <span className="font-brand text-xl font-bold tracking-tight">
                 VISE
               </span>
               <span className="hidden text-[0.7rem] text-primary-foreground/75 sm:block">
-                세종대 바이브코딩 동아리
+                세종대 바이브코딩 소모임
               </span>
             </span>
           </Link>

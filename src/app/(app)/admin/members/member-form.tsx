@@ -25,7 +25,7 @@ const initialState: MemberFormState = {};
 
 const ROLE_LABELS: Record<MemberRole, string> = {
   admin: "관리자",
-  member: "동아리원",
+  member: "소모임원",
 };
 
 export function MemberForm({

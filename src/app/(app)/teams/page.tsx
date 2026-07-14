@@ -9,7 +9,7 @@ export default async function TeamsPage() {
 
   return (
     <div className="space-y-6">
-      <PageHeader title="팀" description="동아리 팀 소개" />
+      <PageHeader title="팀" description="소모임 팀 소개" />
       <div className="grid gap-4 sm:grid-cols-2">
         {teams.map((team) => (
           <Link key={team.team_name} href={`/teams/${team.team_name}`}>

@@ -31,7 +31,7 @@ export default function AdminHomePage() {
                 <Users className="size-4" />
               </div>
               <CardTitle>멤버 관리</CardTitle>
-              <CardDescription>동아리원 명단을 추가/수정합니다</CardDescription>
+              <CardDescription>소모임원 명단을 추가/수정합니다</CardDescription>
             </CardHeader>
           </Card>
         </Link>
