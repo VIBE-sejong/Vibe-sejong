@@ -24,16 +24,12 @@ export default function LoginPage() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-6 bg-muted/30 px-4">
       <div className="flex flex-col items-center gap-1 text-center">
-        <div className="mb-2 flex size-16 items-center justify-center rounded-full border border-border bg-white p-2 shadow-sm">
-          <img
-            src="/sejong-emblem.png"
-            alt="세종대학교 엠블럼"
-            className="size-full object-contain"
-          />
+        <div className="mb-2 flex size-16 items-center justify-center rounded-full border border-border bg-white shadow-sm">
+          <span className="font-brand text-3xl font-bold text-primary">V</span>
         </div>
         <h1 className="font-brand text-lg font-semibold">VISE</h1>
         <p className="text-sm text-muted-foreground">
-          세종대 바이브코딩 소모임
+          수도권 연합 바이브코딩 소모임
         </p>
       </div>
 

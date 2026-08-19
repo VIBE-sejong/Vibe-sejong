@@ -52,28 +52,27 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
+  --background: #f7fbf9;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  /* Sejong University official colors: Sejong Crimson Red #C3002F (PANTONE 200c),
-     Sejong Light Gold #D7BF77 (PANTONE 871c) — from sejong.ac.kr UI guide. */
-  --primary: #c3002f;
-  --primary-foreground: oklch(0.985 0 0);
+  /* Mint Breeze pastel palette: dusty mint primary + soft coral accent. */
+  --primary: #4fa98c;
+  --primary-foreground: #122e25;
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: #faf3e2;
-  --accent-foreground: #c3002f;
-  --gold: #b08d2e;
-  --gold-icon: #fff2cc;
+  --accent: #e3f5ee;
+  --accent-foreground: #122e25;
+  --gold: #c96a4e;
+  --gold-icon: #122e25;
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
-  --ring: #c3002f;
+  --ring: #4fa98c;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
@@ -82,12 +81,12 @@
   --radius: 0.625rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: #c3002f;
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: #faf3e2;
-  --sidebar-accent-foreground: #c3002f;
+  --sidebar-primary: #4fa98c;
+  --sidebar-primary-foreground: #122e25;
+  --sidebar-accent: #e3f5ee;
+  --sidebar-accent-foreground: #122e25;
   --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: #c3002f;
+  --sidebar-ring: #4fa98c;
 }
 
 .dark {
@@ -97,20 +96,20 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: #e0335c;
-  --primary-foreground: oklch(0.985 0 0);
+  --primary: #5fc7a5;
+  --primary-foreground: #122e25;
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
-  --accent: #3a2e1c;
-  --accent-foreground: #d7bf77;
-  --gold: #d7bf77;
-  --gold-icon: #fff2cc;
+  --accent: #1e3a32;
+  --accent-foreground: #a8e6d1;
+  --gold: #f0967a;
+  --gold-icon: #122e25;
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: #e0335c;
+  --ring: #5fc7a5;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
@@ -118,12 +117,12 @@
   --chart-5: oklch(0.269 0 0);
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: #e0335c;
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: #3a2e1c;
-  --sidebar-accent-foreground: #d7bf77;
+  --sidebar-primary: #5fc7a5;
+  --sidebar-primary-foreground: #122e25;
+  --sidebar-accent: #1e3a32;
+  --sidebar-accent-foreground: #a8e6d1;
   --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: #e0335c;
+  --sidebar-ring: #5fc7a5;
 }
 
 @layer base {

@@ -19,7 +19,7 @@ const brandSerif = Noto_Serif_KR({
 });
 
 export const metadata: Metadata = {
-  title: "VISE - 세종대 바이브코딩 소모임",
+  title: "VISE - 수도권 연합 바이브코딩 소모임",
   description: "VISE 소모임원 활동 사이트",
 };
 

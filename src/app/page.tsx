@@ -11,7 +11,6 @@ import {
   Palette,
   ClipboardList,
   Code2,
-  ExternalLink,
 } from "lucide-react";
 import { getSession } from "@/lib/auth/session.server";
 import { Button } from "@/components/ui/button";
@@ -67,8 +66,7 @@ const TEAM_ROLES = [
 
 const RECRUIT_STATS = [
   { value: "16명", label: "모집 인원 (4팀 × 4인)" },
-  { value: "무관", label: "학년·전공 (세종대 재학생)" },
-  { value: "15주", label: "한 학기, 주 1회 정기 모임" },
+  { value: "무관", label: "학년·전공·학교 (수도권 대학생)" },
   { value: "무료", label: "참가비 없음" },
 ];
 
@@ -81,19 +79,17 @@ export default async function Home() {
       <header className="bg-primary text-primary-foreground shadow-sm">
         <div className="mx-auto flex max-w-4xl items-center justify-between px-4 py-5">
           <div className="flex items-center gap-2.5">
-            <span className="flex size-12 items-center justify-center rounded-full bg-white p-1">
-              <img
-                src="/sejong-emblem.png"
-                alt="세종대학교 엠블럼"
-                className="size-full object-contain"
-              />
+            <span className="flex size-12 items-center justify-center rounded-full bg-white">
+              <span className="font-brand text-2xl font-bold text-primary">
+                V
+              </span>
             </span>
             <span className="flex flex-col leading-none">
               <span className="font-brand text-xl font-bold tracking-tight">
                 VISE
               </span>
               <span className="hidden text-[0.7rem] text-primary-foreground/75 sm:block">
-                세종대 바이브코딩 소모임
+                수도권 연합 바이브코딩 소모임
               </span>
             </span>
           </div>
@@ -111,7 +107,7 @@ export default async function Home() {
             aria-hidden
             className="pointer-events-none absolute inset-x-0 -top-24 -z-10 mx-auto h-72 w-72 rounded-full bg-gold/25 blur-3xl"
           />
-          <Badge className="mx-auto">세종대학교 바이브코딩 소모임 1기 모집</Badge>
+          <Badge className="mx-auto">수도권 연합 바이브코딩 소모임 1기 모집</Badge>
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
             코딩은 전공자만? 아니요.
             <br />
@@ -160,9 +156,9 @@ export default async function Home() {
             {AUDIENCE_ITEMS.map(({ icon: Icon, text }) => (
               <Card key={text}>
                 <CardContent className="flex items-start gap-3">
-                  <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-primary text-gold-icon shadow-[0_0_14px_rgba(255,242,204,0.6)]">
+                  <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-primary text-gold-icon shadow-[0_0_14px_rgba(255,214,196,0.6)]">
                     <Icon
-                      className="size-5 drop-shadow-[0_0_5px_rgba(255,242,204,0.9)]"
+                      className="size-5 drop-shadow-[0_0_5px_rgba(255,214,196,0.9)]"
                       strokeWidth={2.5}
                     />
                   </span>
@@ -179,7 +175,7 @@ export default async function Home() {
             </CardContent>
           </Card>
           <p className="text-center text-xs text-muted-foreground">
-            VISE는 세종대학교 학생들이 자율적으로 운영하는 비영리 코딩 소모임이며,
+            VISE는 수도권 대학생들이 자율적으로 운영하는 비영리 코딩 소모임이며,
             특정 종교·정치 단체와 무관합니다.
           </p>
         </section>
@@ -198,9 +194,9 @@ export default async function Home() {
             {WHAT_WE_DO_ITEMS.map(({ icon: Icon, title, text }) => (
               <Card key={title}>
                 <CardContent className="space-y-2">
-                  <span className="flex size-9 items-center justify-center rounded-lg bg-primary text-gold-icon shadow-[0_0_14px_rgba(255,242,204,0.6)]">
+                  <span className="flex size-9 items-center justify-center rounded-lg bg-primary text-gold-icon shadow-[0_0_14px_rgba(255,214,196,0.6)]">
                     <Icon
-                      className="size-5 drop-shadow-[0_0_5px_rgba(255,242,204,0.9)]"
+                      className="size-5 drop-shadow-[0_0_5px_rgba(255,214,196,0.9)]"
                       strokeWidth={2.5}
                     />
                   </span>
@@ -220,9 +216,9 @@ export default async function Home() {
             {TEAM_ROLES.map(({ icon: Icon, role, count }) => (
               <Card key={role}>
                 <CardContent className="flex flex-col items-center gap-2 text-center">
-                  <span className="flex size-10 items-center justify-center rounded-full bg-primary text-gold-icon shadow-[0_0_16px_rgba(255,242,204,0.6)]">
+                  <span className="flex size-10 items-center justify-center rounded-full bg-primary text-gold-icon shadow-[0_0_16px_rgba(255,214,196,0.6)]">
                     <Icon
-                      className="size-6 drop-shadow-[0_0_5px_rgba(255,242,204,0.9)]"
+                      className="size-6 drop-shadow-[0_0_5px_rgba(255,214,196,0.9)]"
                       strokeWidth={2.5}
                     />
                   </span>
@@ -239,33 +235,9 @@ export default async function Home() {
           </p>
         </section>
 
-        <section className="space-y-4">
-          <h2 className="text-xl font-semibold">만든 사람</h2>
-          <Card>
-            <CardContent className="flex flex-col gap-2">
-              <p className="text-sm">
-                <strong>김성일</strong> · 세종대학교 지능기전공학부
-                스마트기기전공 22학번 (컴퓨터공학 복수전공)
-              </p>
-              <p className="text-sm text-muted-foreground">
-                이 웹사이트를 포함해 VISE를 혼자 기획·개발하고 있습니다.
-              </p>
-              <a
-                href="https://github.com/KIMSE0NG1L"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex w-fit items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground"
-              >
-                <ExternalLink className="size-4" />
-                github.com/KIMSE0NG1L
-              </a>
-            </CardContent>
-          </Card>
-        </section>
-
         <section id="지원" className="space-y-4">
           <h2 className="text-xl font-semibold">모집 개요</h2>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <div className="grid grid-cols-3 gap-3">
             {RECRUIT_STATS.map(({ value, label }) => (
               <Card key={label}>
                 <CardContent className="text-center">
