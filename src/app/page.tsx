@@ -67,7 +67,7 @@ const TEAM_ROLES = [
 const RECRUIT_STATS = [
   { value: "16명", label: "모집 인원 (4팀 × 4인)" },
   { value: "무관", label: "학년·전공·학교 (수도권 대학생)" },
-  { value: "무료", label: "참가비 없음" },
+  { value: "2만원", label: "참가비" },
 ];
 
 export default async function Home() {
