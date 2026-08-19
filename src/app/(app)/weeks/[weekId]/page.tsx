@@ -6,6 +6,7 @@ import { ActivityFeed } from "./activity-feed";
 import { ActivityUploadForm } from "./activity-upload-form";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { TeamAvatar } from "@/components/team-avatar";
+import { WEEKLY_TEAM_NAMES } from "@/types/db";
 
 export default async function WeekDetailPage({
   params,
@@ -21,7 +22,10 @@ export default async function WeekDetailPage({
 
   if (!week || !session) notFound();
 
-  const myPost = posts.find((p) => p.team === session.team);
+  const canSubmit = WEEKLY_TEAM_NAMES.includes(session.team);
+  const myPost = canSubmit
+    ? posts.find((p) => p.team === session.team)
+    : undefined;
 
   return (
     <div className="space-y-8">
@@ -39,16 +43,18 @@ export default async function WeekDetailPage({
         </CardContent>
       </Card>
 
-      <div className="space-y-3">
-        <h2 className="flex items-center gap-2 text-lg font-medium">
-          <TeamAvatar team={session.team} />
-          우리 팀 활동 업로드
-        </h2>
-        <ActivityUploadForm
-          weekId={week.id}
-          existingContent={myPost?.content ?? ""}
-        />
-      </div>
+      {canSubmit && (
+        <div className="space-y-3">
+          <h2 className="flex items-center gap-2 text-lg font-medium">
+            <TeamAvatar team={session.team} />
+            우리 팀 활동 업로드
+          </h2>
+          <ActivityUploadForm
+            weekId={week.id}
+            existingContent={myPost?.content ?? ""}
+          />
+        </div>
+      )}
 
       <div className="space-y-3">
         <h2 className="text-lg font-medium">팀별 활동 피드</h2>

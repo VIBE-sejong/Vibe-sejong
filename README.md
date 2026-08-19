@@ -17,8 +17,11 @@ shadcn/ui · Vercel 배포. 인증은 Supabase Auth가 아닌 커스텀 방식(�
 2. SQL Editor에서 `supabase/sql` 아래 파일을 번호 순서대로 실행:
    `001_schema.sql` → `002_rls_deny_all.sql` → `003_storage.sql` →
    `005_remove_marketing_part.sql` → `006_teams_and_profiles.sql` →
-   `007_teams_rls_deny_all.sql` → `008_profile_images_storage.sql`.
-   (`004_bootstrap_admin.example.sql`은 3번 단계에서 별도로 실행)
+   `007_teams_rls_deny_all.sql` → `008_profile_images_storage.sql` →
+   `009_add_staff_team.sql` → `010_seed_staff_team.sql`.
+   (`004_bootstrap_admin.example.sql`은 3번 단계에서 별도로 실행. `009`와 `010`은
+   반드시 별도 실행으로 나눠서 실행할 것 — 같은 트랜잭션에서 새 enum 값을
+   바로 쓸 수 없음)
 3. 최초 관리자 1명을 SQL로 직접 등록 (이후엔 `/admin/members`에서 웹 UI로 관리):
    `supabase/sql/004_bootstrap_admin.example.sql`을 참고해 학번/이름/팀/파트를
    본인 정보로 바꿔서 SQL Editor에서 실행.

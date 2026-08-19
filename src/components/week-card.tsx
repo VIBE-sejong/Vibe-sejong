@@ -3,7 +3,7 @@ import { ChevronRight } from "lucide-react";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
-import { TEAM_NAMES } from "@/types/db";
+import { WEEKLY_TEAM_NAMES } from "@/types/db";
 import type { Week } from "@/types/db";
 
 export function WeekCard({
@@ -15,7 +15,7 @@ export function WeekCard({
   submittedTeamCount?: number;
   isLast?: boolean;
 }) {
-  const total = TEAM_NAMES.length;
+  const total = WEEKLY_TEAM_NAMES.length;
   const isComplete = (submittedTeamCount ?? 0) >= total;
   const isStarted = (submittedTeamCount ?? 0) > 0;
 

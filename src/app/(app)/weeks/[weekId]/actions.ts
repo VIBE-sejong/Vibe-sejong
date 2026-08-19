@@ -2,6 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { getSession } from "@/lib/auth/session.server";
+import { WEEKLY_TEAM_NAMES } from "@/types/db";
 import {
   activityPostSchema,
   ALLOWED_IMAGE_TYPES,
@@ -29,6 +30,9 @@ export async function createActivityPostAction(
 ): Promise<ActivityFormState> {
   const session = await getSession();
   if (!session) return { error: "로그인이 필요합니다" };
+  if (!WEEKLY_TEAM_NAMES.includes(session.team)) {
+    return { error: "운영진팀은 주차 활동을 제출하지 않습니다" };
+  }
 
   const parsed = activityPostSchema.safeParse({
     weekId: formData.get("weekId"),

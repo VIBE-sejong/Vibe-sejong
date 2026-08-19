@@ -1,8 +1,26 @@
 export type MemberRole = "admin" | "member";
-export type TeamName = "team_1" | "team_2" | "team_3" | "team_4";
+export type TeamName =
+  | "team_1"
+  | "team_2"
+  | "team_3"
+  | "team_4"
+  | "team_staff";
 export type MemberPart = "design" | "planning" | "dev";
 
-export const TEAM_NAMES: TeamName[] = ["team_1", "team_2", "team_3", "team_4"];
+export const TEAM_NAMES: TeamName[] = [
+  "team_1",
+  "team_2",
+  "team_3",
+  "team_4",
+  "team_staff",
+];
+/** The 4 project teams that submit weekly activity. Excludes 운영진팀. */
+export const WEEKLY_TEAM_NAMES: TeamName[] = [
+  "team_1",
+  "team_2",
+  "team_3",
+  "team_4",
+];
 export const MEMBER_PARTS: MemberPart[] = ["design", "planning", "dev"];
 export const MEMBER_ROLES: MemberRole[] = ["admin", "member"];
 
@@ -11,6 +29,7 @@ export const TEAM_LABELS: Record<TeamName, string> = {
   team_2: "2팀",
   team_3: "3팀",
   team_4: "4팀",
+  team_staff: "운영진팀",
 };
 
 export const TEAM_SHORT_LABELS: Record<TeamName, string> = {
@@ -18,6 +37,7 @@ export const TEAM_SHORT_LABELS: Record<TeamName, string> = {
   team_2: "2",
   team_3: "3",
   team_4: "4",
+  team_staff: "운영진",
 };
 
 export const TEAM_AVATAR_CLASSES: Record<TeamName, string> = {
@@ -25,6 +45,7 @@ export const TEAM_AVATAR_CLASSES: Record<TeamName, string> = {
   team_2: "bg-sky-500 text-white",
   team_3: "bg-amber-500 text-white",
   team_4: "bg-emerald-500 text-white",
+  team_staff: "bg-rose-500 text-white",
 };
 
 export const PART_LABELS: Record<MemberPart, string> = {
