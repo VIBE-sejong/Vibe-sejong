@@ -255,7 +255,7 @@ export default async function Home() {
             <CardContent className="space-y-2">
               <p className="font-medium">지원 방법</p>
               <p className="text-sm text-muted-foreground">
-                마감일·문의 채널은 추후 공지됩니다.
+                8월 27일 자정까지 모집합니다. 문의 채널은 추후 공지됩니다.
               </p>
               <Button
                 variant="outline"
